@@ -6,6 +6,9 @@
 
         <title>Laravel</title>
 
+        <!-- Favicon -->
+        <link href="{{URL::asset('favicon.ico')}}" rel="shortcut icon">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
@@ -68,29 +71,24 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Painel</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+                        <a href="{{ route('login') }}">Entrar</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
+                <div class="img">
+                    <img src="{{ URL::asset('img/cow.png') }}" class="img-fluid" alt="Responsive image">
+                </div> 
                 <div class="title m-b-md">
-                    Laravel
+                    MkFuzzy
                 </div>
-
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/" rel="noopener noreferrer" target="_blank">Laravel</a>
+                    <a href="https://www.usc.br/" rel="noopener noreferrer" target="_blank">USC</a>
+                    <a href="https://github.com/depaulirafael/mkfuzzy" rel="noopener noreferrer" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>
