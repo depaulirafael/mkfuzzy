@@ -1,89 +1,44 @@
 # MkFuzzy
 
 Sistema especialista de apoio à produção de leite bovino utilizando lógica fuzzy.
+
 Trabalho realizado para conclusão do curso de Ciência da Computação na Universidade do Sagrado Coração (USC).
 
-## Começando
-
-Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
 ### Pré-requisitos
 
-What things you need to install the software and how to install them
+* [Composer](https://getcomposer.org/) - Dependency Manager for PHP
+* Banco de Dados compatível com o Framework Laravel
+
+### Instalando
+
+Faça o download do branch master
 
 ```
-Give examples
+git clone https://github.com/depaulirafael/mkfuzzy.git
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Instalar as dependências do composer
 
 ```
-Give the example
+composer install
 ```
 
-And repeat
+Faça uma cópia do arquivo .env.example e renomeie para .env
+
+verifique se você tem um banco de dados criado e configure-o no arquivo .env
+
+Finalmente,  execute as migrações
 
 ```
-until finished
+php artisan migrate
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Desenvolvido com
 
-Explain how to run the automated tests for this system
+* [Laravel](https://laravel.com) - The PHP Framework For Web Artisans
+* [Composer](https://getcomposer.org/) - Dependency Manager for PHP
+* [PHP Fuzzy Logic Library](https://github.com/gsil1976/fuzzy-logic) - Analyze variable based on fuzzy logic rules
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
