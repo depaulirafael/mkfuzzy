@@ -24,9 +24,7 @@ Instalar as dependências do composer
 composer install
 ```
 
-Faça uma cópia do arquivo .env.example e renomeie para .env
-
-verifique se você tem um banco de dados criado e configure-o no arquivo .env
+Faça uma cópia do arquivo .env.example e renomeie para .env. Verifique se você tem um banco de dados criado e configure-o no arquivo .env
 
 Finalmente,  execute as migrações
 
