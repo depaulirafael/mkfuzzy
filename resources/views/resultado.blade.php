@@ -9,19 +9,17 @@
                     <h1><b>Resultado</b></h1>
                 </div>
             </div>  
-
-    @if ($errors->any())
-    <div class="alert alert-danger alert-dismissible" id="alert">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Ops!</strong> Houve alguns problemas.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-
+            @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible" id="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Ops!</strong> Houve alguns problemas.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
             <div class="form-group row">
                 <div class="col-md-6 offset-md-3">
                     <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -34,6 +32,9 @@
             </div>
             <form method="POST" action="{{ route('resultado') }}">
                 @csrf
+                <div class="card">
+                    <div class="card-body">
+
                 <div class="form-group row">
                     <label for="ruim_a" class="col-md-3 col-form-label text-md-right">{{ __('Ruim:') }}</label>
                     <div class="col-md-3">
@@ -70,6 +71,10 @@
                         value="{{$resultado->excelente_b}}" autocomplete="off" required>
                     </div>  
                 </div>
+
+                    </div>
+                </div>
+                <br/>
                 <div class="form-group row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="pull-left">

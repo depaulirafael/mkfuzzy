@@ -10,4 +10,10 @@ class Animal extends Model
         'identificacao', 'nome', 'id_raca'
     ];
     protected $table = 'animais';
+
+    public static function PorBusca($busca){
+		return self::where('nome', 'like', $busca.'%')
+					->orwhere('identificacao', 'like', $busca.'%')
+					->get();
+	}
 }

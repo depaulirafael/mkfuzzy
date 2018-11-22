@@ -18,8 +18,6 @@
     <div class="col-md-12">
         <a href="{{route('animais.create')}}" class="btn btn-default btn-sm pull-right">
             <i class="fa fa-plus"></i> Adicionar</a>
-        <a href="" class="btn btn-default btn-sm pull-right">
-            <i class="fa fa-book"></i> Relatório</a>
     </div>           
 </div>
 <br />

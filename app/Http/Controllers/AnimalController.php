@@ -1,7 +1,8 @@
 <?php
   
 namespace App\Http\Controllers;
-  
+
+use Auth;
 use App\Animal;
 use App\Raca;
 use Illuminate\Http\Request;
@@ -62,4 +63,23 @@ class AnimalController extends Controller
         $animal->delete();
         return redirect()->route('animais.index')->with('success','Animal deletado.');
     }
+
+	public function autoComplete(Request $request){
+		if (Auth::Check()) {
+			$busca = $request->term;
+			$data = Animal::PorBusca($busca);
+			$result = array();
+			foreach ($data as $key => $value){
+				$result[] = ['id' => $value->id,
+							 'nome' => $value->nome,
+							 'identificacao' => $value->identificacao,
+							 'value' => $value->identificacao,
+							 'label' => '<b>'.$value->identificacao.'</b>'.($value->nome<>'' ? ' - '.$value->nome : '')];
+			}
+			return response()->json($result);
+		}
+		else {
+			return redirect()->to(route('home'));
+		}
+	}
 }

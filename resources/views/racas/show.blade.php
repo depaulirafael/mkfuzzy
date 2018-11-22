@@ -16,6 +16,10 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <form action="" method="POST">
+
+            <div class="card">
+            <div class="card-body">
+
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
@@ -24,6 +28,13 @@
                             class="form-control" autocomplete="off" disabled autofocus>
                     </div>
                 </div>
+            </div>
+
+            </div>
+            </div>
+            <br/>
+
+            <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="pull-left">
                         <a class="btn btn-primary" href="{{ route('racas.index') }}"> Voltar</a>

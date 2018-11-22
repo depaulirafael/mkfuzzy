@@ -61,8 +61,6 @@
                                 <option value="4">Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_agua" value="1">  Não</label>
                     </div>
                     <!-- Carboidratos -->
                     <div class="form-group row">
@@ -77,8 +75,6 @@
                                 <option value="4">Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_carboidratos" value="1">  Não</label>
                     </div>
                     <!-- Proteinas -->
                     <div class="form-group row">
@@ -93,13 +89,11 @@
                                 <option value="4">Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_proteinas" value="1">  Não</label>
                     </div>
                     <!-- Micronutrientes -->
                     <div class="form-group row">
                         <label for="termo_micronutrientes" class="col-xs-3 col-sm-3 col-md-3 col-form-label text-md-right">
-                            {{ __('Proteínas:') }}
+                            {{ __('Micronutrientes:') }}
                         </label>
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <select class="form-control" name="termo_micronutrientes" required>
@@ -109,8 +103,6 @@
                                 <option value="4">Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_micronutrientes" value="1">  Não</label>
                     </div>
                     </div>
                 </div>
@@ -127,13 +119,10 @@
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <select class="form-control" name="termo_resultado" required>
                                 <option value="1">Ruim</option>
-                                <option value="2">Regular</option>
-                                <option value="3">Bom</option>
-                                <option value="4">Excelente</option>
+                                <option value="2">Satisfatório</option>
+                                <option value="3">Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_resultado" value="1">  Não</label>
                     </div>
                     </div>
                 </div>

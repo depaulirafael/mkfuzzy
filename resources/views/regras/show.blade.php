@@ -48,9 +48,6 @@
                                 <option value="4" @if ($regra->termo_agua==4) selected @endif>Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_agua" value="1"
-                                @if ($regra->not_agua) checked @endif disabled>  Não</label>
                     </div>
                     <!-- Carboidratos -->
                     <div class="form-group row">
@@ -65,9 +62,6 @@
                                 <option value="4" @if ($regra->termo_carboidratos==4) selected @endif>Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_carboidratos" value="1"
-                                @if ($regra->not_carboidratos) checked @endif disabled>  Não</label>
                     </div>
                     <!-- Proteinas -->
                     <div class="form-group row">
@@ -82,14 +76,11 @@
                                 <option value="4" @if ($regra->termo_proteinas==4) selected @endif>Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_proteinas" value="1"
-                                @if ($regra->not_proteinas) checked @endif disabled>  Não</label>
                     </div>
                     <!-- Micronutrientes -->
                     <div class="form-group row">
                         <label for="termo_micronutrientes" class="col-xs-3 col-sm-3 col-md-3 col-form-label text-md-right">
-                            {{ __('Proteínas:') }}
+                            {{ __('Micronutrientes:') }}
                         </label>
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <select class="form-control" name="termo_micronutrientes" disabled>
@@ -99,9 +90,6 @@
                                 <option value="4" @if ($regra->termo_micronutrientes==4) selected @endif>Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_micronutrientes" value="1"
-                                @if ($regra->not_micronutrientes) checked @endif disabled>  Não</label>
                     </div>
                     </div>
                 </div>
@@ -118,14 +106,10 @@
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <select class="form-control" name="termo_resultado" disabled>
                                 <option value="1" @if ($regra->termo_resultado==1) selected @endif>Ruim</option>
-                                <option value="2" @if ($regra->termo_resultado==2) selected @endif>Regular</option>
-                                <option value="3" @if ($regra->termo_resultado==3) selected @endif>Bom</option>
-                                <option value="4" @if ($regra->termo_resultado==4) selected @endif>Excelente</option>
+                                <option value="2" @if ($regra->termo_resultado==2) selected @endif>Satisfatório</option>
+                                <option value="3" @if ($regra->termo_resultado==4) selected @endif>Excelente</option>
                             </select>
                         </div>
-                        <label class="col-xs-2 col-sm-2 col-md-2 col-form-label text-md-left">
-                            <input type="checkbox" name="not_resultado" value="1"
-                                @if ($regra->not_resultado) checked @endif disabled>  Não</label>
                     </div>
                     </div>
                 </div>

@@ -46,3 +46,6 @@ Route::post('/resultado', 'ResultadoController@save')->name('resultado');
 Route::resource('animais','AnimalController')->middleware('auth');
 Route::resource('racas','RacaController')->middleware('auth');
 Route::resource('regras','RegraController')->middleware('auth');
+Route::resource('producoes','ProducaoController')->middleware('auth');
+
+Route::get('/autocomplete', 'AnimalController@autoComplete')->name('autocomplete');

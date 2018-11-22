@@ -31,12 +31,6 @@ class RegraController extends Controller
         ]);
 
         $dataForm = $request->all();
-        $dataForm['not_agua'] = (!isset($dataForm['not_agua']))? 0 : 1;
-        $dataForm['not_carboidratos'] = (!isset($dataForm['not_carboidratos']))? 0 : 1;
-        $dataForm['not_proteinas'] = (!isset($dataForm['not_proteinas']))? 0 : 1;
-        $dataForm['not_micronutrientes'] = (!isset($dataForm['not_micronutrientes']))? 0 : 1;
-        $dataForm['not_resultado'] = (!isset($dataForm['not_resultado']))? 0 : 1;
-
         Regra::create($dataForm);
         return redirect()->route('regras.index')->with('success','Regra inserida.');
     }
@@ -65,12 +59,6 @@ class RegraController extends Controller
         ]);
       
         $dataForm = $request->all();
-        $dataForm['not_agua'] = (!isset($dataForm['not_agua']))? 0 : 1;
-        $dataForm['not_carboidratos'] = (!isset($dataForm['not_carboidratos']))? 0 : 1;
-        $dataForm['not_proteinas'] = (!isset($dataForm['not_proteinas']))? 0 : 1;
-        $dataForm['not_micronutrientes'] = (!isset($dataForm['not_micronutrientes']))? 0 : 1;
-        $dataForm['not_resultado'] = (!isset($dataForm['not_resultado']))? 0 : 1;
-
         $regra = Regra::findOrFail($id);
         $regra->update($dataForm);
         return redirect()->route('regras.index')->with('success','Regra atualizada.');

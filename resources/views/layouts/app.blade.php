@@ -10,21 +10,22 @@
     <title>{{ config('app.name', 'MkFuzzy') }}</title>
 
     <!-- Favicon -->
-    <link href="{{URL::asset('favicon.ico')}}" rel="shortcut icon">
+    <link href="{{asset('favicon.ico')}}" rel="shortcut icon">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{URL::asset('js/jquery.min.js')}}"></script>
-    <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{URL::asset('js/ajax.js')}}"></script>
-    <script src="{{URL::asset('js/lightbox.js')}}"></script>
+    <script src="{{asset('js/app.js') }}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>    
+    <script src="{{asset('js/jquery.min.js') }}"></script>
+    @yield('head_js')
 
     <!-- Fonts -->
-    <link href="{{URL::asset('css/font-family-nunito.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{URL::asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/font-family-nunito.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    @yield('head_css')
     <style>
         #up {  
             position: fixed;
@@ -76,7 +77,7 @@
                         @guest
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">
+                                <a class="nav-link" href="{{ route('producoes.index') }}">
                                     <i class="fa fa-percent"></i>  {{ __('Estimativas de Produção') }}</a>
                             </li>
                         @endguest
@@ -142,8 +143,6 @@
             @yield('content')
         </main>
     </div>
-
-    <img src="{{URL::asset('img/subir.png')}}" id="up" style="display: none;" title="Topo">
 
     @yield('script') 
 
