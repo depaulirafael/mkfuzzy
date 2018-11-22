@@ -22,8 +22,7 @@ class AguaController extends Controller
     {
         $request->validate([
             'ruim_a' => 'required|numeric',
-            'ruim_b' => 'required|numeric',
-            'ruim_c' => 'required|numeric|min:'.$request->ruim_a,
+            'ruim_b' => 'required|numeric|min:'.$request->ruim_a,
             'regular_a' => 'required|numeric',
             'regular_c' => 'required|numeric|min:'.$request->regular_a,
             'bom_a' => 'required|numeric',
